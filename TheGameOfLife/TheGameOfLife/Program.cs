@@ -10,10 +10,12 @@ namespace TheGameOfLife
         public static int YSize { get; set; }
         public static int XSize { get; set; }
         public static List<Cell> ListOfCells { get; set; }
+
         static void Main(string[] args)
         {
+            Console.SetWindowSize(110, 40);
             Console.OutputEncoding = Encoding.Unicode;
-            YSize = 26;
+            YSize = 34;
             XSize = 50;
             ListOfCells = Cell.CreateCells();
 
@@ -22,7 +24,7 @@ namespace TheGameOfLife
                 Console.SetCursorPosition(0, 0);
                 PrintOutCells();
                 ListOfCells = CheckEachSquareWillStayDeadOrAlive();
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(40);
                 
 
             }
